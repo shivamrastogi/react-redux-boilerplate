@@ -1,8 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Home from './components/home';
+import {Provider} from 'react-redux';
+import store from './store';
 
-const Index = () => {
-  return <div>Hello React!</div>;
-};
-
-ReactDOM.render(<Index />, document.getElementById("index"));
+ReactDOM.render(
+  <Provider store={store}>
+    <Home />
+  </Provider>,
+  document.getElementById('index')
+);
